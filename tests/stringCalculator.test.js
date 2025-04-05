@@ -27,6 +27,10 @@ test('should return 6 for string (custom delimiter) "//;\n1;2"', () => {
 test('should throw an error for negative numbers', () => {
     expect(() => add('-1,2,-3')).toThrow('negative numbers not allowed -1,-3');
 });
-
-
+test('should throw an error for negative numbers', () => {
+    expect(() => add('-1\n2,-3')).toThrow('negative numbers not allowed -1,-3');
+});
+test('should throw an error for negative numbers', () => {
+    expect(() => add('-1\n-2,-3')).toThrow('negative numbers not allowed -1,-2,-3');
+});
 
